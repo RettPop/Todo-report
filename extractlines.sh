@@ -48,7 +48,8 @@ TMPFILE="/tmp/$(basename $0).$$.tmp"
 #echo "$INFILESMASK"
 #echo "$PARENTDIR"
 
-FILES=$(find $PARENTDIR -name $INFILESMASK -exec grep -l $LOOKFORTEXT {} \;)
+echo "find $PARENTDIR -name \"$INFILESMASK\" -exec grep -l $LOOKFORTEXT {} \;)"
+FILES=$(find $PARENTDIR -name "$INFILESMASK" -exec grep -l $LOOKFORTEXT {} \;)
 
 for f in $FILES
 do
