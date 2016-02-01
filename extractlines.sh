@@ -43,10 +43,10 @@ TMPFILE="/tmp/$(basename $0).$$.tmp"
 #LOOKFORTEXT=$1
 #OUTFILE=$4
 #INFILESMASK=$3
-echo "$LOOKFORTEXT"
-echo "$OUTFILE"
-echo "$INFILESMASK"
-echo "$PARENTDIR"
+#echo "$LOOKFORTEXT"
+#echo "$OUTFILE"
+#echo "$INFILESMASK"
+#echo "$PARENTDIR"
 
 FILES=$(find $PARENTDIR -name $INFILESMASK -exec grep -l $LOOKFORTEXT {} \;)
 
@@ -70,5 +70,5 @@ echo "\n$(cat $TMPFILE)" > $TMPFILE
 cat $TMPFILE > $OUTFILE
 rm $TMPFILE
 
-echo "Files found $FILESCOUNT"
-echo "Lines found $LINESCOUNT"
+#echo "Files found $FILESCOUNT"
+#echo "Lines found $LINESCOUNT"
